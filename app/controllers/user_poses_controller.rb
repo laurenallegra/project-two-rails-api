@@ -4,7 +4,7 @@ class UserPosesController < ApplicationController
   # GET /user_poses
   # GET /user_poses.json
   def index
-    @user_poses = UserPose.all
+    @user_poses = current_user.user_poses
 
     render json: @user_poses
   end

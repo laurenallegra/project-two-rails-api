@@ -41,7 +41,7 @@ module ProjectTwoRailsApi
     # Cross-Origin Resource Sharing
     config.middleware.use Rack::Cors do
       allow do
-        origins ENV['CLIENT_ORIGIN'] || 'https://laurenallegra.github.io'
+        origins ENV['CLIENT_ORIGIN'] || 'localhost:8080'
         resource '*',
                  headers: :any,
                  methods: [:options, :get,
