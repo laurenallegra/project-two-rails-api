@@ -1,4 +1,4 @@
-class PosesController < ApplicationController
+class PosesController < ProtectedController
   before_action :set_pose, only: [:show, :update, :destroy]
 
   # GET /poses
@@ -49,11 +49,11 @@ class PosesController < ApplicationController
 
   private
 
-    def set_pose
-      @pose = Pose.find(params[:id])
-    end
+  def set_pose
+    @pose = Pose.find(params[:id])
+  end
 
-    def pose_params
-      params.require(:pose).permit(:english_name, :sanskrit_name, :img_url)
-    end
+  def pose_params
+    params.require(:pose).permit(:english_name, :sanskrit_name, :img_url)
+  end
 end
