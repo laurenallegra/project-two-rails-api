@@ -22,11 +22,11 @@ button to generate a random sequence of their favorite poses.
 | ----   | -----------            | -----------------     |
 | POST   | `/sign-up`             | `users#signup`        |
 | POST   | `/sign-in`             | `users#signin`        |
-| DELETE | `/sign-out/:id`        | `users#signout`       |
-| PATCH  | `/change-password/:id` | `users#changepw`      |
+| DELETE | `/sign-out/id`         | `users#signout`       |
+| PATCH  | `/change-password/id`  | `users#changepw`      |
 | GET    | `/user_poses`          | `userposes#index`     |
 | POST   | `/user_poses`          | `userposes#create`    |
-| PATCH  | `/user_poses/:id`      | `userposes#update`    |
-| DELETE | `/user_poses/:id`      | `userposes#destroy`   |
+| PATCH  | `/user_poses/id`       | `userposes#update`    |
+| DELETE | `/user_poses/id`       | `userposes#destroy`   |
 
 All data returned from API actions is formatted as JSON.
